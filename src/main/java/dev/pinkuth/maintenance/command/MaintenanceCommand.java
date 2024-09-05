@@ -14,7 +14,7 @@ public class MaintenanceCommand extends Command {
 
     public MaintenanceCommand() {
         super("maintenance", CommandSettings.builder()
-                .setUsageMessage("/mtn <on|off> [server]")
+                .setUsageMessage("/maintenance <on|off> [server]")
                 .setDescription("Enable or disable maintenance mode")
                 .setAliases("mtn")
                 .setPermission("maintenance.change").build());

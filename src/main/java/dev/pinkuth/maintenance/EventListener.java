@@ -19,8 +19,9 @@ public class EventListener {
 
         // Handle global maintenance (disconnects player is enabled)
         MaintenanceManager maintenanceManager = Maintenance.getInstance().getMaintenanceManager();
-        if (maintenanceManager.isGlobalMaintenanceEnabled())
+        if (maintenanceManager.isGlobalMaintenanceEnabled()) {
             player.disconnect(maintenanceManager.getMaintenanceMessage(MaintenanceManager.TYPE_JOIN));
+        }
     }
 
     /**
