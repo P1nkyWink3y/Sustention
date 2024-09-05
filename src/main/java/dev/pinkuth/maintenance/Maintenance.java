@@ -4,15 +4,14 @@ import dev.pinkuth.maintenance.command.MaintenanceCommand;
 import dev.waterdog.waterdogpe.event.defaults.ServerTransferRequestEvent;
 import dev.waterdog.waterdogpe.plugin.Plugin;
 import dev.waterdog.waterdogpe.event.defaults.PlayerLoginEvent;
+import lombok.Getter;
 
+@Getter
 public final class Maintenance extends Plugin {
 
+    @Getter
     private static Maintenance instance;
     private MaintenanceManager maintenanceManager;
-
-    public static Maintenance getInstance() {
-        return instance;
-    }
 
     @Override
     public void onEnable() {
@@ -39,9 +38,4 @@ public final class Maintenance extends Plugin {
     public void onDisable() {
         maintenanceManager.save();
     }
-
-    public MaintenanceManager getMaintenanceManager() {
-        return maintenanceManager;
-    }
-
 }
